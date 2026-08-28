@@ -1,4 +1,9 @@
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
+import { LanguageProvider } from "./components/LanguageProvider";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 export const metadata = {
   title: "Shivu Events Madhugiri | Flowers · Photography · Sound · Utensils",
@@ -17,7 +22,15 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body className="font-body">{children}</body>
+      <body className="font-body">
+        <LanguageProvider>
+          <Header />
+          <main className="min-h-screen">{children}</main>
+          <Footer />
+          <WhatsAppButton />
+        </LanguageProvider>
+        <Analytics />
+      </body>
     </html>
   );
 }

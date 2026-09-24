@@ -1,6 +1,9 @@
 export const WHATSAPP_NUMBER = "918217328664"; // TODO: update if number changes
 export const PHONE_DISPLAY = "+91 82173 28664";
 
+// TODO: update once the real production domain is known (used for SEO metadata/sitemap).
+export const SITE_URL = "https://shivu-events.vercel.app";
+
 // Daily opening hours used by the live Open/Closed status indicator.
 export const BUSINESS_HOURS = { openHour: 8, closeHour: 21 }; // 8 AM - 9 PM, every day
 
@@ -306,6 +309,22 @@ export const dict = {
       { value: 10, suffix: "+", label: "Years of Experience" },
       { value: 25, suffix: "+", label: "Upcoming Events" },
     ],
+    checkDateEyebrow: "Plan Ahead",
+    checkDateTitle: "Check Your Date",
+    checkDateSub: "Tell us your event date — we'll confirm availability on WhatsApp right away.",
+    checkDateNameLabel: "Your Name",
+    checkDateDateLabel: "Event Date",
+    checkDateBtn: "Check Availability",
+    checkDateMsgIntro: "Hi, I want to check availability for my event.",
+    checkDateMsgDate: "Date",
+    areasEyebrow: "Where We Work",
+    areasTitle: "Areas We Serve",
+    areasSub: "Based in Madhugiri, and happy to travel across the surrounding towns.",
+    areas: ["Madhugiri", "Koratagere", "Sira", "Pavagada", "Tumkur", "Gubbi", "Huliyar", "Tiptur"],
+    videoTestimonialsEyebrow: "In Their Words",
+    videoTestimonialsTitle: "Video Testimonials",
+    videoTestimonialsEmpty: "Video testimonials are on their way — ask us to record one at your next event!",
+    videoTestimonials: [],
   },
   kn: {
     nav: ["ಮುಖಪುಟ", "ಸೇವೆಗಳು", "ನಮ್ಮ ಬಗ್ಗೆ", "ಸಂಪರ್ಕ", "ವಿಮರ್ಶೆಗಳು"],
@@ -566,5 +585,21 @@ export const dict = {
       { value: 10, suffix: "+", label: "ವರ್ಷಗಳ ಅನುಭವ" },
       { value: 25, suffix: "+", label: "ಮುಂಬರುವ ಈವೆಂಟ್‌ಗಳು" },
     ],
+    checkDateEyebrow: "ಮುಂಚಿತವಾಗಿ ಪ್ಲಾನ್ ಮಾಡಿ",
+    checkDateTitle: "ನಿಮ್ಮ ದಿನಾಂಕ ಚೆಕ್ ಮಾಡಿ",
+    checkDateSub: "ನಿಮ್ಮ ಈವೆಂಟ್ ದಿನಾಂಕ ಹೇಳಿ — ನಾವು WhatsApp ಮೂಲಕ ತಕ್ಷಣ ಲಭ್ಯತೆ ಖಚಿತಪಡಿಸ್ತೀವಿ.",
+    checkDateNameLabel: "ನಿಮ್ಮ ಹೆಸರು",
+    checkDateDateLabel: "ಈವೆಂಟ್ ದಿನಾಂಕ",
+    checkDateBtn: "ಲಭ್ಯತೆ ಚೆಕ್ ಮಾಡಿ",
+    checkDateMsgIntro: "ನಮಸ್ಕಾರ, ನನ್ನ ಈವೆಂಟ್‌ಗೆ ಲಭ್ಯತೆ ಚೆಕ್ ಮಾಡಬೇಕಿತ್ತು.",
+    checkDateMsgDate: "ದಿನಾಂಕ",
+    areasEyebrow: "ನಾವು ಕೆಲಸ ಮಾಡೋ ಜಾಗಗಳು",
+    areasTitle: "ನಾವು ಸೇವೆ ಒದಗಿಸೋ ಪ್ರದೇಶಗಳು",
+    areasSub: "ಮಧುಗಿರಿ ಆಧಾರಿತ, ಸುತ್ತಮುತ್ತಲಿನ ಊರುಗಳಿಗೂ ಸಂತೋಷದಿಂದ ಬರ್ತೀವಿ.",
+    areas: ["ಮಧುಗಿರಿ", "ಕೊರಟಗೆರೆ", "ಸಿರಾ", "ಪಾವಗಡ", "ತುಮಕೂರು", "ಗುಬ್ಬಿ", "ಹುಳಿಯಾರ್", "ತಿಪಟೂರು"],
+    videoTestimonialsEyebrow: "ಅವರ ಮಾತಿನಲ್ಲಿ",
+    videoTestimonialsTitle: "ವಿಡಿಯೋ ವಿಮರ್ಶೆಗಳು",
+    videoTestimonialsEmpty: "ವಿಡಿಯೋ ವಿಮರ್ಶೆಗಳು ಶೀಘ್ರದಲ್ಲೇ ಬರ್ತಿವೆ — ನಿಮ್ಮ ಮುಂದಿನ ಈವೆಂಟ್‌ನಲ್ಲಿ ಒಂದು ರೆಕಾರ್ಡ್ ಮಾಡಿಕೊಡಿ ಅಂತ ನಮಗೆ ಹೇಳಿ!",
+    videoTestimonials: [],
   },
 };

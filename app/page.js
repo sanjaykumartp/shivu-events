@@ -6,6 +6,7 @@ import { Reveal } from "./components/Reveal";
 import { WhatsAppIcon, ClockIcon, TagIcon, CalendarIcon, LocationIcon } from "./components/Icons";
 import OpenStatus from "./components/OpenStatus";
 import Testimonials from "./components/Testimonials";
+import VideoTestimonials from "./components/VideoTestimonials";
 import GoogleReviewsBadge from "./components/GoogleReviewsBadge";
 import InstagramFeed from "./components/InstagramFeed";
 import PastEventsSlider from "./components/PastEventsSlider";
@@ -122,6 +123,7 @@ export default function Home() {
 
       <PastEventsSlider />
       <Testimonials />
+      <VideoTestimonials />
       <GoogleReviewsBadge />
       <InstagramFeed />
       <StatsCounter />

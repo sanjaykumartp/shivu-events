@@ -18,6 +18,9 @@ export const GOOGLE_RATING = null;
 export const INSTAGRAM_URL = "#";
 export const INSTAGRAM_HANDLE = "@shivueventsmadhugiri";
 
+// TODO: set to the real Facebook page URL once it exists.
+export const FACEBOOK_URL = "#";
+
 // Placeholder stock clip (free, Pexels license) — swap for real footage
 // of your own decoration/event work when available.
 export const HERO_VIDEO = "https://videos.pexels.com/video-files/34926869/14794504_1920_1080_24fps.mp4";
@@ -289,6 +292,7 @@ export const dict = {
     instagramTitle: "Behind the Scenes on Instagram",
     instagramSub: "A peek at our recent setups and celebrations.",
     instagramFollowBtn: "Follow on Instagram",
+    socialConnect: "Connect With Us",
     pastEventsEyebrow: "Our Work",
     pastEventsTitle: "Weddings We've Celebrated",
     pastEventsSub: "A glimpse of the celebrations we've had the honour of being part of.",
@@ -549,6 +553,7 @@ export const dict = {
     instagramTitle: "Instagram‌ನಲ್ಲಿ ನಮ್ಮ ಕೆಲಸ",
     instagramSub: "ನಮ್ಮ ಇತ್ತೀಚಿನ ಸೆಟಪ್ ಮತ್ತು ಸಂಭ್ರಮಗಳ ಒಂದು ನೋಟ.",
     instagramFollowBtn: "Instagram‌ನಲ್ಲಿ ಫಾಲೋ ಮಾಡಿ",
+    socialConnect: "ನಮ್ಮೊಂದಿಗೆ ಸಂಪರ್ಕದಲ್ಲಿರಿ",
     pastEventsEyebrow: "ನಮ್ಮ ಕೆಲಸ",
     pastEventsTitle: "ನಾವು ಆಚರಿಸಿದ ಮದುವೆಗಳು",
     pastEventsSub: "ನಾವು ಭಾಗಿಯಾದ ಸಂಭ್ರಮಗಳ ಒಂದು ನೋಟ.",

@@ -2,13 +2,7 @@
 import Link from "next/link";
 import { useLanguage } from "./LanguageProvider";
 import { dict, PHONE_DISPLAY, WHATSAPP_NUMBER } from "../lib/site";
-import { InstagramIcon, FacebookIcon, ContactIcon, LocationIcon } from "./Icons";
-
-// TODO: replace "#" with real social profile URLs once available.
-const SOCIALS = [
-  { Icon: InstagramIcon, href: "#", label: "Instagram" },
-  { Icon: FacebookIcon, href: "#", label: "Facebook" },
-];
+import { ContactIcon, LocationIcon } from "./Icons";
 
 export default function Footer() {
   const { lang } = useLanguage();
@@ -27,18 +21,6 @@ export default function Footer() {
             </div>
           </div>
           <p className="text-sm text-cream/60 leading-relaxed mt-4 max-w-xs">{t.footerDesc}</p>
-          <div className="flex items-center gap-3 mt-6">
-            {SOCIALS.map(({ Icon, href, label }) => (
-              <a
-                key={label}
-                href={href}
-                aria-label={label}
-                className="w-9 h-9 rounded-full border border-cream/25 flex items-center justify-center text-cream/70 hover:text-gold hover:border-gold transition-colors"
-              >
-                <Icon className="w-4 h-4" />
-              </a>
-            ))}
-          </div>
         </div>
 
         <div>

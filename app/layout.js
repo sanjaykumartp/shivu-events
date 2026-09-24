@@ -3,6 +3,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { LanguageProvider } from "./components/LanguageProvider";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import SocialBar from "./components/SocialBar";
 import WhatsAppButton from "./components/WhatsAppButton";
 
 export const metadata = {
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
         <LanguageProvider>
           <Header />
           <main className="min-h-screen">{children}</main>
+          <SocialBar />
           <Footer />
           <WhatsAppButton />
         </LanguageProvider>

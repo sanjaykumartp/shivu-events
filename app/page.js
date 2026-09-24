@@ -75,12 +75,12 @@ export default function Home() {
                 <span className="text-goldSoft text-base">✦</span>
                 <p className="font-body text-goldSoft text-sm tracking-widest uppercase">{t.whyChooseUs}</p>
               </div>
-              <div className="grid grid-cols-2 gap-x-8 gap-y-10">
+              <div className="grid grid-cols-2 gap-4 sm:gap-5">
                 {t.highlights.map((h, i) => {
                   const Icon = HIGHLIGHT_ICONS[i];
                   return (
                     <Reveal key={h.title} className={i % 2 === 1 ? "delay-150" : ""}>
-                      <div>
+                      <div className="h-full rounded-2xl bg-white/[0.06] backdrop-blur-sm border border-gold/20 p-5 hover:bg-white/[0.1] hover:border-gold/40 transition-colors">
                         <span className="inline-flex items-center justify-center w-12 h-12 rounded-full border border-gold/40 bg-gold/10 text-goldSoft mb-3 shadow-[0_0_16px_rgba(228,193,88,0.15)]">
                           <Icon className="w-6 h-6" />
                         </span>

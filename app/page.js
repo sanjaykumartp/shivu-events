@@ -120,11 +120,11 @@ export default function Home() {
         </div>
       </section>
 
-      <StatsCounter />
       <PastEventsSlider />
       <Testimonials />
       <GoogleReviewsBadge />
       <InstagramFeed />
+      <StatsCounter />
     </>
   );
 }

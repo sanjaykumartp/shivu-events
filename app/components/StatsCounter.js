@@ -51,7 +51,7 @@ export default function StatsCounter() {
   }, []);
 
   return (
-    <section ref={ref} className="px-6 py-16 bg-gradient-to-r from-cream2 via-cream to-cream2 border-y border-gold/20">
+    <section ref={ref} className="px-6 py-16 bg-white border-t border-maroon/10">
       <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
         {t.stats.map((s) => (
           <div key={s.label}>

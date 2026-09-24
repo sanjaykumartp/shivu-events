@@ -14,9 +14,8 @@ export const GOOGLE_MAPS_URL = "";
 // left null so we never show a fabricated number on the live site.
 export const GOOGLE_RATING = null;
 
-// TODO: set to the real Instagram profile URL once the business account exists.
-export const INSTAGRAM_URL = "#";
-export const INSTAGRAM_HANDLE = "@shivueventsmadhugiri";
+export const INSTAGRAM_URL = "https://www.instagram.com/shivu_events_madhugiri_2";
+export const INSTAGRAM_HANDLE = "@shivu_events_madhugiri_2";
 
 // TODO: set to the real Facebook page URL once it exists.
 export const FACEBOOK_URL = "#";

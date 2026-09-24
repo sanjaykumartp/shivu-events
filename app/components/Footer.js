@@ -1,8 +1,8 @@
 "use client";
 import Link from "next/link";
 import { useLanguage } from "./LanguageProvider";
-import { dict, PHONE_DISPLAY, WHATSAPP_NUMBER } from "../lib/site";
-import { ContactIcon, LocationIcon } from "./Icons";
+import { dict, PHONE_DISPLAY, WHATSAPP_NUMBER, INSTAGRAM_URL, FACEBOOK_URL } from "../lib/site";
+import { ContactIcon, LocationIcon, InstagramIcon, FacebookIcon } from "./Icons";
 
 export default function Footer() {
   const { lang } = useLanguage();
@@ -21,6 +21,25 @@ export default function Footer() {
             </div>
           </div>
           <p className="text-sm text-cream/60 leading-relaxed mt-4 max-w-xs">{t.footerDesc}</p>
+          <div className="flex items-center gap-3 mt-6">
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              aria-label="Instagram"
+              className="w-9 h-9 rounded-full flex items-center justify-center text-white shadow-md hover:scale-110 transition-transform"
+              style={{ background: "linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5)" }}
+            >
+              <InstagramIcon className="w-4 h-4" />
+            </a>
+            <a
+              href={FACEBOOK_URL}
+              target="_blank"
+              aria-label="Facebook"
+              className="w-9 h-9 rounded-full flex items-center justify-center text-white shadow-md hover:scale-110 transition-transform bg-[#1877F2]"
+            >
+              <FacebookIcon className="w-4 h-4" />
+            </a>
+          </div>
         </div>
 
         <div>

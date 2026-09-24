@@ -51,14 +51,14 @@ export default function StatsCounter() {
   }, []);
 
   return (
-    <section ref={ref} className="px-6 py-16 bg-maroon text-cream">
+    <section ref={ref} className="px-6 py-16 bg-gradient-to-r from-cream2 via-cream to-cream2 border-y border-gold/20">
       <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
         {t.stats.map((s) => (
           <div key={s.label}>
-            <p className="font-display text-4xl sm:text-5xl text-goldSoft">
+            <p className="font-display text-4xl sm:text-5xl text-maroon">
               <Counter value={s.value} suffix={s.suffix} started={started} />
             </p>
-            <p className="mt-2 text-xs sm:text-sm tracking-wide text-cream/70 uppercase">{s.label}</p>
+            <p className="mt-2 text-xs sm:text-sm tracking-wide text-ink/60 uppercase">{s.label}</p>
           </div>
         ))}
       </div>

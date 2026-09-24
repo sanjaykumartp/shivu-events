@@ -9,6 +9,7 @@ import Testimonials from "./components/Testimonials";
 import GoogleReviewsBadge from "./components/GoogleReviewsBadge";
 import InstagramFeed from "./components/InstagramFeed";
 import PastEventsSlider from "./components/PastEventsSlider";
+import StatsCounter from "./components/StatsCounter";
 import Eyebrow from "./components/Eyebrow";
 import { dict, IMAGES, HERO_VIDEO, WHATSAPP_NUMBER } from "./lib/site";
 
@@ -123,6 +124,7 @@ export default function Home() {
       <Testimonials />
       <GoogleReviewsBadge />
       <InstagramFeed />
+      <StatsCounter />
     </>
   );
 }

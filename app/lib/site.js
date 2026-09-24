@@ -298,6 +298,12 @@ export const dict = {
       { names: "Kiran & Shwetha", venue: "Shivu Events Grounds, Madhugiri", date: "Nov 2025", img: IMAGES.pastEvent3 },
       { names: "Vikram & Anjali", venue: "Garden Venue, Madhugiri", date: "Oct 2025", img: IMAGES.pastEvent4 },
     ],
+    stats: [
+      { value: 350, suffix: "+", label: "Happy Weddings" },
+      { value: 500, suffix: "+", label: "Happy Couples" },
+      { value: 10, suffix: "+", label: "Years of Experience" },
+      { value: 25, suffix: "+", label: "Upcoming Events" },
+    ],
   },
   kn: {
     nav: ["ಮುಖಪುಟ", "ಸೇವೆಗಳು", "ನಮ್ಮ ಬಗ್ಗೆ", "ಸಂಪರ್ಕ", "ವಿಮರ್ಶೆಗಳು"],
@@ -551,6 +557,12 @@ export const dict = {
       { names: "ನವೀನ್ & ದೀಪಾ", venue: "ಕಮ್ಯುನಿಟಿ ಹಾಲ್, ಮಧುಗಿರಿ", date: "ಡಿಸೆಂಬರ್ 2025", img: IMAGES.pastEvent2 },
       { names: "ಕಿರಣ್ & ಶ್ವೇತಾ", venue: "ಶಿವು ಈವೆಂಟ್ಸ್ ಗ್ರೌಂಡ್ಸ್, ಮಧುಗಿರಿ", date: "ನವೆಂಬರ್ 2025", img: IMAGES.pastEvent3 },
       { names: "ವಿಕ್ರಮ್ & ಅಂಜಲಿ", venue: "ಗಾರ್ಡನ್ ವೆನ್ಯೂ, ಮಧುಗಿರಿ", date: "ಅಕ್ಟೋಬರ್ 2025", img: IMAGES.pastEvent4 },
+    ],
+    stats: [
+      { value: 350, suffix: "+", label: "ಸಂತೋಷದ ಮದುವೆಗಳು" },
+      { value: 500, suffix: "+", label: "ಸಂತೋಷದ ದಂಪತಿಗಳು" },
+      { value: 10, suffix: "+", label: "ವರ್ಷಗಳ ಅನುಭವ" },
+      { value: 25, suffix: "+", label: "ಮುಂಬರುವ ಈವೆಂಟ್‌ಗಳು" },
     ],
   },
 };

@@ -50,9 +50,11 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative overflow-hidden bg-gradient-to-br from-maroon2 via-maroon to-maroon text-cream flex flex-col justify-center px-6 sm:px-10 lg:px-16 pt-28 pb-14 md:border-l md:border-gold/20">
+        <div className="relative overflow-hidden bg-gradient-to-br from-maroon2 via-maroon to-[#2E0B0B] text-cream flex flex-col justify-center px-6 sm:px-10 lg:px-16 pt-28 pb-14 md:border-l md:border-gold/20">
+          <div className="absolute -top-24 -right-16 w-80 h-80 rounded-full bg-gold/20 blur-[90px] pointer-events-none" />
+          <div className="absolute -bottom-28 -left-20 w-96 h-96 rounded-full bg-goldSoft/10 blur-[100px] pointer-events-none" />
           <div
-            className="absolute inset-0 opacity-[0.07] pointer-events-none"
+            className="absolute inset-0 opacity-[0.06] pointer-events-none"
             style={{ backgroundImage: "radial-gradient(rgba(228,193,88,0.9) 1px, transparent 1.5px)", backgroundSize: "22px 22px" }}
           />
           <span className="absolute top-6 right-6 sm:top-8 sm:right-10 text-gold/25 font-display text-4xl select-none">✦</span>

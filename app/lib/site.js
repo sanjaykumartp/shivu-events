@@ -20,7 +20,7 @@ export const INSTAGRAM_HANDLE = "@shivueventsmadhugiri";
 
 // Placeholder stock clip (free, Pexels license) — swap for real footage
 // of your own decoration/event work when available.
-export const HERO_VIDEO = "https://videos.pexels.com/video-files/35222226/14921689_1920_1080_50fps.mp4";
+export const HERO_VIDEO = "https://videos.pexels.com/video-files/34926869/14794504_1920_1080_24fps.mp4";
 
 export const IMAGES = {
   hero: "https://images.unsplash.com/photo-1587271636175-90d58cdad458?auto=format&fit=crop&w=1600&q=70",

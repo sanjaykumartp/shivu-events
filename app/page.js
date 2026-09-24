@@ -8,6 +8,7 @@ import OpenStatus from "./components/OpenStatus";
 import Testimonials from "./components/Testimonials";
 import GoogleReviewsBadge from "./components/GoogleReviewsBadge";
 import InstagramFeed from "./components/InstagramFeed";
+import PastEventsSlider from "./components/PastEventsSlider";
 import Eyebrow from "./components/Eyebrow";
 import { dict, IMAGES, HERO_VIDEO, WHATSAPP_NUMBER } from "./lib/site";
 
@@ -68,8 +69,8 @@ export default function Home() {
 
             <div className="mt-14 pt-10 border-t border-gold/20">
               <div className="flex items-center gap-3 mb-8">
-                <span className="text-gold text-base">✦</span>
-                <p className="font-body text-gold text-sm tracking-widest uppercase">{t.whyChooseUs}</p>
+                <span className="text-goldSoft text-base">✦</span>
+                <p className="font-body text-goldSoft text-sm tracking-widest uppercase">{t.whyChooseUs}</p>
               </div>
               <div className="grid grid-cols-2 gap-x-8 gap-y-10">
                 {t.highlights.map((h, i) => {
@@ -81,7 +82,7 @@ export default function Home() {
                           <Icon className="w-6 h-6" />
                         </span>
                         <h3 className="font-display text-lg text-cream mb-1.5">{h.title}</h3>
-                        <p className="text-xs text-cream/60 leading-relaxed">{h.desc}</p>
+                        <p className="text-xs text-cream/75 leading-relaxed">{h.desc}</p>
                       </div>
                     </Reveal>
                   );
@@ -98,9 +99,9 @@ export default function Home() {
           <Eyebrow>{t.servicesEyebrow}</Eyebrow>
           <h2 className="font-display text-4xl text-maroon">{t.servicesTitle}</h2>
         </Reveal>
-        <div className="grid sm:grid-cols-2 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {t.services.map((s, i) => (
-            <Reveal key={s.name} className={i % 2 === 1 ? "delay-150" : ""}>
+            <Reveal key={s.name} className={i % 3 === 1 ? "delay-150" : i % 3 === 2 ? "delay-300" : ""}>
               <Link href={`/services/${s.slug}`} className="group block rounded-2xl overflow-hidden bg-white shadow-sm border border-maroon/10 h-full">
                 <div className="relative h-48 overflow-hidden">
                   <Image src={s.img} alt={s.name} fill sizes="(max-width: 640px) 100vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
@@ -116,6 +117,7 @@ export default function Home() {
         </div>
       </section>
 
+      <PastEventsSlider />
       <Testimonials />
       <GoogleReviewsBadge />
       <InstagramFeed />

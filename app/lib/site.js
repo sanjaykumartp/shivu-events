@@ -34,6 +34,14 @@ export const IMAGES = {
   teamW2: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=70",
   teamW3: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=70",
   teamW4: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=70",
+  tent: "https://images.unsplash.com/photo-1675376616537-c8aa9ddc9977?auto=format&fit=crop&w=900&q=60",
+  chairs: "https://images.unsplash.com/photo-1560332218-4d266ab9793a?auto=format&fit=crop&w=900&q=60",
+  generator: "https://images.unsplash.com/photo-1705051278299-7e64ba21437a?auto=format&fit=crop&w=900&q=60",
+  // Placeholder completed-wedding photos for the "Weddings We've Celebrated" slider.
+  pastEvent1: "https://images.unsplash.com/photo-1722952934708-749c22eb2e58?auto=format&fit=crop&w=1200&q=70",
+  pastEvent2: "https://images.unsplash.com/photo-1630526720753-aa4e71acf67d?auto=format&fit=crop&w=1200&q=70",
+  pastEvent3: "https://images.unsplash.com/photo-1587271407850-8d438ca9fdf2?auto=format&fit=crop&w=1200&q=70",
+  pastEvent4: "https://images.unsplash.com/photo-1741201864710-8c031ebd13bc?auto=format&fit=crop&w=1200&q=70",
 };
 
 export const dict = {
@@ -58,17 +66,47 @@ export const dict = {
     servicesTitle: "Our Services",
     viewGallery: "View Gallery",
     backToServices: "Back to Services",
+    viewAll: "All",
     services: [
       {
         slug: "decoration",
         name: "Flower Decoration",
         desc: "Stage, mandap, entrance and hall decoration for weddings, engagements, house-warmings and all functions.",
         img: IMAGES.flowers,
-        gallery: [
-          { id: "SFD-N230", name: "Wedding Entrance Gate", price: "₹12,000 onwards", img: IMAGES.flowers },
-          { id: "SFD-S207", name: "Heart Theme Stage Backdrop", price: "₹18,000 onwards", img: IMAGES.flowers },
-          { id: "SFD-D239", name: "Traditional Mandap Decoration", price: "₹25,000 onwards", img: IMAGES.flowers },
-          { id: "SFD-E221", name: "Reception Entrance Arch", price: "₹15,000 onwards", img: IMAGES.flowers },
+        subcategories: [
+          {
+            id: "stages",
+            name: "Stage Decoration",
+            items: [
+              { id: "SFD-S207", name: "Heart Theme Stage Backdrop", price: "₹18,000 onwards", img: IMAGES.flowers },
+              { id: "SFD-S210", name: "Floral Stage Backdrop", price: "₹15,000 onwards", img: IMAGES.flowers },
+              { id: "SFD-S215", name: "Royal Theme Stage Setup", price: "₹22,000 onwards", img: IMAGES.flowers },
+            ],
+          },
+          {
+            id: "mantapas",
+            name: "Mantapa Decoration",
+            items: [
+              { id: "SFD-D239", name: "Traditional Mantapa Decoration", price: "₹25,000 onwards", img: IMAGES.flowers },
+              { id: "SFD-D242", name: "Modern Mantapa Setup", price: "₹28,000 onwards", img: IMAGES.flowers },
+            ],
+          },
+          {
+            id: "entrance",
+            name: "Entrance & Gate Decoration",
+            items: [
+              { id: "SFD-N230", name: "Wedding Entrance Gate", price: "₹12,000 onwards", img: IMAGES.flowers },
+              { id: "SFD-E221", name: "Reception Entrance Arch", price: "₹15,000 onwards", img: IMAGES.flowers },
+            ],
+          },
+          {
+            id: "hall",
+            name: "Hall & Function Decoration",
+            items: [
+              { id: "SFD-H301", name: "Reception Hall Decoration", price: "₹20,000 onwards", img: IMAGES.flowers },
+              { id: "SFD-H305", name: "House-warming Decoration", price: "₹10,000 onwards", img: IMAGES.flowers },
+            ],
+          },
         ],
       },
       {
@@ -76,21 +114,65 @@ export const dict = {
         name: "Photography",
         desc: "Candid and traditional photography & videography to capture every moment of your event.",
         img: IMAGES.photography,
-        gallery: [
-          { id: "SFD-P101", name: "Candid Photography Package", price: "₹15,000 onwards", img: IMAGES.photography },
-          { id: "SFD-P102", name: "Traditional Videography", price: "₹12,000 onwards", img: IMAGES.photography },
-          { id: "SFD-P103", name: "Pre-Wedding Shoot", price: "₹20,000 onwards", img: IMAGES.photography },
+        subcategories: [
+          {
+            id: "prewedding",
+            name: "Pre-Wedding Shoot",
+            items: [
+              { id: "SFD-P201", name: "Outdoor Pre-Wedding Shoot", price: "₹15,000 onwards", img: IMAGES.photography },
+              { id: "SFD-P203", name: "Studio Pre-Wedding Shoot", price: "₹10,000 onwards", img: IMAGES.photography },
+            ],
+          },
+          {
+            id: "wedding",
+            name: "Wedding Day Coverage",
+            items: [
+              { id: "SFD-P101", name: "Candid Wedding Photography", price: "₹15,000 onwards", img: IMAGES.photography },
+              { id: "SFD-P102", name: "Traditional Wedding Videography", price: "₹12,000 onwards", img: IMAGES.photography },
+              { id: "SFD-P105", name: "Full Day Photo + Video Combo", price: "₹25,000 onwards", img: IMAGES.photography },
+            ],
+          },
+          {
+            id: "events",
+            name: "Other Events",
+            items: [
+              { id: "SFD-P301", name: "Engagement Photography", price: "₹8,000 onwards", img: IMAGES.photography },
+              { id: "SFD-P303", name: "House-warming Photography", price: "₹6,000 onwards", img: IMAGES.photography },
+              { id: "SFD-P305", name: "Birthday & Small Functions", price: "₹5,000 onwards", img: IMAGES.photography },
+            ],
+          },
         ],
       },
       {
         slug: "sound",
         name: "Sound Systems",
-        desc: "Professional sound systems and DJ setup for weddings, receptions and celebrations of any size.",
+        desc: "Professional sound systems, lighting and live music for weddings, receptions and celebrations of any size.",
         img: IMAGES.sound,
-        gallery: [
-          { id: "SFD-A101", name: "Basic DJ & Sound Setup", price: "₹8,000 onwards", img: IMAGES.sound },
-          { id: "SFD-A102", name: "Premium Sound & Lighting", price: "₹18,000 onwards", img: IMAGES.sound },
-          { id: "SFD-A103", name: "Live Orchestra Setup", price: "₹25,000 onwards", img: IMAGES.sound },
+        subcategories: [
+          {
+            id: "dj",
+            name: "DJ & Sound Setup",
+            items: [
+              { id: "SFD-A101", name: "Basic DJ & Sound Setup", price: "₹8,000 onwards", img: IMAGES.sound },
+              { id: "SFD-A104", name: "Premium DJ with Dance Floor", price: "₹18,000 onwards", img: IMAGES.sound },
+            ],
+          },
+          {
+            id: "lighting",
+            name: "Stage Lighting",
+            items: [
+              { id: "SFD-A110", name: "Basic Stage Lighting", price: "₹6,000 onwards", img: IMAGES.sound },
+              { id: "SFD-A102", name: "Premium LED Stage Lighting", price: "₹15,000 onwards", img: IMAGES.sound },
+            ],
+          },
+          {
+            id: "orchestra",
+            name: "Live Orchestra & Band",
+            items: [
+              { id: "SFD-A103", name: "Live Orchestra Setup", price: "₹25,000 onwards", img: IMAGES.sound },
+              { id: "SFD-A115", name: "Devotional / Bhajan Group", price: "₹12,000 onwards", img: IMAGES.sound },
+            ],
+          },
         ],
       },
       {
@@ -98,10 +180,63 @@ export const dict = {
         name: "Event Utensils Rental",
         desc: "Plates, glasses, vessels and catering essentials on rent for your function, delivered on time.",
         img: IMAGES.utensils,
-        gallery: [
-          { id: "SFD-U101", name: "Basic Steel Utensils Set", price: "₹3,000 onwards", img: IMAGES.utensils },
-          { id: "SFD-U102", name: "Premium Buffet Service Set", price: "₹6,000 onwards", img: IMAGES.utensils },
-          { id: "SFD-U103", name: "Full Catering Utensils Package", price: "₹10,000 onwards", img: IMAGES.utensils },
+        subcategories: [
+          {
+            id: "steel",
+            name: "Steel Utensils",
+            items: [
+              { id: "SFD-U101", name: "Basic Steel Utensils Set", price: "₹3,000 onwards", img: IMAGES.utensils },
+              { id: "SFD-U104", name: "Premium Steel Set", price: "₹5,000 onwards", img: IMAGES.utensils },
+            ],
+          },
+          {
+            id: "buffet",
+            name: "Buffet Service Items",
+            items: [
+              { id: "SFD-U102", name: "Premium Buffet Service Set", price: "₹6,000 onwards", img: IMAGES.utensils },
+              { id: "SFD-U108", name: "Chafing Dish Set", price: "₹4,000 onwards", img: IMAGES.utensils },
+            ],
+          },
+          {
+            id: "catering",
+            name: "Full Catering Setup",
+            items: [
+              { id: "SFD-U103", name: "Full Catering Utensils Package", price: "₹10,000 onwards", img: IMAGES.utensils },
+              { id: "SFD-U112", name: "Large Function Package (500+ guests)", price: "₹18,000 onwards", img: IMAGES.utensils },
+            ],
+          },
+        ],
+      },
+      {
+        slug: "rentals",
+        name: "Tents, Generators & Rentals",
+        desc: "Pandals, generators, chairs and all the event infrastructure — set up and taken down right on schedule.",
+        img: IMAGES.tent,
+        subcategories: [
+          {
+            id: "pandals",
+            name: "Pandals & Tents",
+            items: [
+              { id: "SFD-R101", name: "Basic Pandal Setup", price: "₹10,000 onwards", img: IMAGES.tent },
+              { id: "SFD-R104", name: "Premium Decorated Marquee Tent", price: "₹20,000 onwards", img: IMAGES.tent },
+            ],
+          },
+          {
+            id: "generators",
+            name: "Generators",
+            items: [
+              { id: "SFD-R201", name: "15 KVA Silent Generator", price: "₹4,000 onwards", img: IMAGES.generator },
+              { id: "SFD-R204", name: "30 KVA Silent Generator", price: "₹7,000 onwards", img: IMAGES.generator },
+            ],
+          },
+          {
+            id: "furniture",
+            name: "Chairs & Furniture",
+            items: [
+              { id: "SFD-R301", name: "Plastic Chairs (per 100)", price: "₹2,000 onwards", img: IMAGES.chairs },
+              { id: "SFD-R305", name: "Premium Cushioned Chairs (per 100)", price: "₹4,000 onwards", img: IMAGES.chairs },
+            ],
+          },
         ],
       },
     ],
@@ -154,6 +289,15 @@ export const dict = {
     instagramTitle: "Behind the Scenes on Instagram",
     instagramSub: "A peek at our recent setups and celebrations.",
     instagramFollowBtn: "Follow on Instagram",
+    pastEventsEyebrow: "Our Work",
+    pastEventsTitle: "Weddings We've Celebrated",
+    pastEventsSub: "A glimpse of the celebrations we've had the honour of being part of.",
+    pastEvents: [
+      { names: "Arjun & Priya", venue: "Kalyana Mantapa, Madhugiri", date: "Feb 2026", img: IMAGES.pastEvent1 },
+      { names: "Naveen & Deepa", venue: "Community Hall, Madhugiri", date: "Dec 2025", img: IMAGES.pastEvent2 },
+      { names: "Kiran & Shwetha", venue: "Shivu Events Grounds, Madhugiri", date: "Nov 2025", img: IMAGES.pastEvent3 },
+      { names: "Vikram & Anjali", venue: "Garden Venue, Madhugiri", date: "Oct 2025", img: IMAGES.pastEvent4 },
+    ],
   },
   kn: {
     nav: ["ಮುಖಪುಟ", "ಸೇವೆಗಳು", "ನಮ್ಮ ಬಗ್ಗೆ", "ಸಂಪರ್ಕ", "ವಿಮರ್ಶೆಗಳು"],
@@ -176,17 +320,47 @@ export const dict = {
     servicesTitle: "ನಮ್ಮ ಸೇವೆಗಳು",
     viewGallery: "ಗ್ಯಾಲರಿ ನೋಡಿ",
     backToServices: "ಸೇವೆಗಳಿಗೆ ಹಿಂತಿರುಗಿ",
+    viewAll: "ಎಲ್ಲಾ",
     services: [
       {
         slug: "decoration",
         name: "ಹೂ ಅಲಂಕಾರ",
         desc: "ಮದುವೆ, ನಿಶ್ಚಿತಾರ್ಥ, ಗೃಹಪ್ರವೇಶ ಮತ್ತು ಎಲ್ಲಾ ಫಂಕ್ಷನ್‌ಗೆ ಸ್ಟೇಜ್, ಮಂಟಪ, ಪ್ರವೇಶದ್ವಾರ ಮತ್ತು ಹಾಲ್ ಅಲಂಕಾರ.",
         img: IMAGES.flowers,
-        gallery: [
-          { id: "SFD-N230", name: "ಮದುವೆ ಪ್ರವೇಶ ದ್ವಾರ", price: "₹12,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.flowers },
-          { id: "SFD-S207", name: "ಹಾರ್ಟ್ ಥೀಮ್ ಸ್ಟೇಜ್ ಹಿನ್ನೆಲೆ", price: "₹18,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.flowers },
-          { id: "SFD-D239", name: "ಸಾಂಪ್ರದಾಯಿಕ ಮಂಟಪ ಅಲಂಕಾರ", price: "₹25,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.flowers },
-          { id: "SFD-E221", name: "ರಿಸೆಪ್ಷನ್ ಪ್ರವೇಶ ಕಮಾನು", price: "₹15,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.flowers },
+        subcategories: [
+          {
+            id: "stages",
+            name: "ಸ್ಟೇಜ್ ಅಲಂಕಾರ",
+            items: [
+              { id: "SFD-S207", name: "ಹಾರ್ಟ್ ಥೀಮ್ ಸ್ಟೇಜ್ ಹಿನ್ನೆಲೆ", price: "₹18,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.flowers },
+              { id: "SFD-S210", name: "ಫ್ಲೋರಲ್ ಸ್ಟೇಜ್ ಹಿನ್ನೆಲೆ", price: "₹15,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.flowers },
+              { id: "SFD-S215", name: "ರಾಯಲ್ ಥೀಮ್ ಸ್ಟೇಜ್ ಸೆಟಪ್", price: "₹22,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.flowers },
+            ],
+          },
+          {
+            id: "mantapas",
+            name: "ಮಂಟಪ ಅಲಂಕಾರ",
+            items: [
+              { id: "SFD-D239", name: "ಸಾಂಪ್ರದಾಯಿಕ ಮಂಟಪ ಅಲಂಕಾರ", price: "₹25,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.flowers },
+              { id: "SFD-D242", name: "ಮಾಡರ್ನ್ ಮಂಟಪ ಸೆಟಪ್", price: "₹28,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.flowers },
+            ],
+          },
+          {
+            id: "entrance",
+            name: "ಪ್ರವೇಶದ್ವಾರ ಅಲಂಕಾರ",
+            items: [
+              { id: "SFD-N230", name: "ಮದುವೆ ಪ್ರವೇಶ ದ್ವಾರ", price: "₹12,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.flowers },
+              { id: "SFD-E221", name: "ರಿಸೆಪ್ಷನ್ ಪ್ರವೇಶ ಕಮಾನು", price: "₹15,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.flowers },
+            ],
+          },
+          {
+            id: "hall",
+            name: "ಹಾಲ್ ಮತ್ತು ಫಂಕ್ಷನ್ ಅಲಂಕಾರ",
+            items: [
+              { id: "SFD-H301", name: "ರಿಸೆಪ್ಷನ್ ಹಾಲ್ ಅಲಂಕಾರ", price: "₹20,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.flowers },
+              { id: "SFD-H305", name: "ಗೃಹಪ್ರವೇಶ ಅಲಂಕಾರ", price: "₹10,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.flowers },
+            ],
+          },
         ],
       },
       {
@@ -194,21 +368,65 @@ export const dict = {
         name: "ಫೋಟೋಗ್ರಫಿ",
         desc: "ನಿಮ್ಮ ಈವೆಂಟ್‌ನ ಪ್ರತಿ ಕ್ಷಣ ಸೆರೆಹಿಡಿಯೋಕೆ ಕ್ಯಾಂಡಿಡ್ ಮತ್ತು ಸಾಂಪ್ರದಾಯಿಕ ಫೋಟೋಗ್ರಫಿ & ವಿಡಿಯೋಗ್ರಫಿ.",
         img: IMAGES.photography,
-        gallery: [
-          { id: "SFD-P101", name: "ಕ್ಯಾಂಡಿಡ್ ಫೋಟೋಗ್ರಫಿ ಪ್ಯಾಕೇಜ್", price: "₹15,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.photography },
-          { id: "SFD-P102", name: "ಸಾಂಪ್ರದಾಯಿಕ ವಿಡಿಯೋಗ್ರಫಿ", price: "₹12,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.photography },
-          { id: "SFD-P103", name: "ಪ್ರೀ-ವೆಡ್ಡಿಂಗ್ ಶೂಟ್", price: "₹20,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.photography },
+        subcategories: [
+          {
+            id: "prewedding",
+            name: "ಪ್ರೀ-ವೆಡ್ಡಿಂಗ್ ಶೂಟ್",
+            items: [
+              { id: "SFD-P201", name: "ಔಟ್‌ಡೋರ್ ಪ್ರೀ-ವೆಡ್ಡಿಂಗ್ ಶೂಟ್", price: "₹15,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.photography },
+              { id: "SFD-P203", name: "ಸ್ಟುಡಿಯೋ ಪ್ರೀ-ವೆಡ್ಡಿಂಗ್ ಶೂಟ್", price: "₹10,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.photography },
+            ],
+          },
+          {
+            id: "wedding",
+            name: "ಮದುವೆ ದಿನದ ಕವರೇಜ್",
+            items: [
+              { id: "SFD-P101", name: "ಕ್ಯಾಂಡಿಡ್ ವೆಡ್ಡಿಂಗ್ ಫೋಟೋಗ್ರಫಿ", price: "₹15,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.photography },
+              { id: "SFD-P102", name: "ಸಾಂಪ್ರದಾಯಿಕ ವೆಡ್ಡಿಂಗ್ ವಿಡಿಯೋಗ್ರಫಿ", price: "₹12,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.photography },
+              { id: "SFD-P105", name: "ಫುಲ್ ಡೇ ಫೋಟೋ + ವಿಡಿಯೋ ಕಾಂಬೋ", price: "₹25,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.photography },
+            ],
+          },
+          {
+            id: "events",
+            name: "ಇತರೆ ಈವೆಂಟ್‌ಗಳು",
+            items: [
+              { id: "SFD-P301", name: "ನಿಶ್ಚಿತಾರ್ಥ ಫೋಟೋಗ್ರಫಿ", price: "₹8,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.photography },
+              { id: "SFD-P303", name: "ಗೃಹಪ್ರವೇಶ ಫೋಟೋಗ್ರಫಿ", price: "₹6,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.photography },
+              { id: "SFD-P305", name: "ಬರ್ತ್‌ಡೇ ಮತ್ತು ಸಣ್ಣ ಫಂಕ್ಷನ್", price: "₹5,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.photography },
+            ],
+          },
         ],
       },
       {
         slug: "sound",
         name: "ಸೌಂಡ್ ಸಿಸ್ಟಂ",
-        desc: "ಎಲ್ಲಾ ಗಾತ್ರದ ಮದುವೆ, ರಿಸೆಪ್ಷನ್ ಮತ್ತು ಸಂಭ್ರಮಗಳಿಗೆ ಪ್ರೊಫೆಷನಲ್ ಸೌಂಡ್ ಸಿಸ್ಟಂ ಮತ್ತು DJ ಸೆಟಪ್.",
+        desc: "ಎಲ್ಲಾ ಗಾತ್ರದ ಮದುವೆ, ರಿಸೆಪ್ಷನ್ ಮತ್ತು ಸಂಭ್ರಮಗಳಿಗೆ ಪ್ರೊಫೆಷನಲ್ ಸೌಂಡ್ ಸಿಸ್ಟಂ, ಲೈಟಿಂಗ್ ಮತ್ತು ಲೈವ್ ಸಂಗೀತ.",
         img: IMAGES.sound,
-        gallery: [
-          { id: "SFD-A101", name: "ಬೇಸಿಕ್ DJ ಮತ್ತು ಸೌಂಡ್ ಸೆಟಪ್", price: "₹8,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.sound },
-          { id: "SFD-A102", name: "ಪ್ರೀಮಿಯಂ ಸೌಂಡ್ ಮತ್ತು ಲೈಟಿಂಗ್", price: "₹18,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.sound },
-          { id: "SFD-A103", name: "ಲೈವ್ ಆರ್ಕೆಸ್ಟ್ರಾ ಸೆಟಪ್", price: "₹25,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.sound },
+        subcategories: [
+          {
+            id: "dj",
+            name: "DJ ಮತ್ತು ಸೌಂಡ್ ಸೆಟಪ್",
+            items: [
+              { id: "SFD-A101", name: "ಬೇಸಿಕ್ DJ ಮತ್ತು ಸೌಂಡ್ ಸೆಟಪ್", price: "₹8,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.sound },
+              { id: "SFD-A104", name: "ಪ್ರೀಮಿಯಂ DJ ಡ್ಯಾನ್ಸ್ ಫ್ಲೋರ್ ಜೊತೆ", price: "₹18,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.sound },
+            ],
+          },
+          {
+            id: "lighting",
+            name: "ಸ್ಟೇಜ್ ಲೈಟಿಂಗ್",
+            items: [
+              { id: "SFD-A110", name: "ಬೇಸಿಕ್ ಸ್ಟೇಜ್ ಲೈಟಿಂಗ್", price: "₹6,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.sound },
+              { id: "SFD-A102", name: "ಪ್ರೀಮಿಯಂ LED ಸ್ಟೇಜ್ ಲೈಟಿಂಗ್", price: "₹15,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.sound },
+            ],
+          },
+          {
+            id: "orchestra",
+            name: "ಲೈವ್ ಆರ್ಕೆಸ್ಟ್ರಾ ಮತ್ತು ಬ್ಯಾಂಡ್",
+            items: [
+              { id: "SFD-A103", name: "ಲೈವ್ ಆರ್ಕೆಸ್ಟ್ರಾ ಸೆಟಪ್", price: "₹25,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.sound },
+              { id: "SFD-A115", name: "ಭಜನಾ ತಂಡ", price: "₹12,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.sound },
+            ],
+          },
         ],
       },
       {
@@ -216,10 +434,63 @@ export const dict = {
         name: "ಈವೆಂಟ್ ಪಾತ್ರೆ ಸಾಮಾನು ಬಾಡಿಗೆ",
         desc: "ತಟ್ಟೆ, ಲೋಟ, ಪಾತ್ರೆ ಮತ್ತು ಕ್ಯಾಟರಿಂಗ್ ಸಾಮಾನು ಬಾಡಿಗೆಗೆ, ಸಮಯಕ್ಕೆ ಸರಿಯಾಗಿ ಡೆಲಿವರಿ.",
         img: IMAGES.utensils,
-        gallery: [
-          { id: "SFD-U101", name: "ಬೇಸಿಕ್ ಸ್ಟೀಲ್ ಪಾತ್ರೆ ಸೆಟ್", price: "₹3,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.utensils },
-          { id: "SFD-U102", name: "ಪ್ರೀಮಿಯಂ ಬಫೆ ಸರ್ವೀಸ್ ಸೆಟ್", price: "₹6,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.utensils },
-          { id: "SFD-U103", name: "ಪೂರ್ಣ ಕ್ಯಾಟರಿಂಗ್ ಪಾತ್ರೆ ಪ್ಯಾಕೇಜ್", price: "₹10,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.utensils },
+        subcategories: [
+          {
+            id: "steel",
+            name: "ಸ್ಟೀಲ್ ಪಾತ್ರೆಗಳು",
+            items: [
+              { id: "SFD-U101", name: "ಬೇಸಿಕ್ ಸ್ಟೀಲ್ ಪಾತ್ರೆ ಸೆಟ್", price: "₹3,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.utensils },
+              { id: "SFD-U104", name: "ಪ್ರೀಮಿಯಂ ಸ್ಟೀಲ್ ಸೆಟ್", price: "₹5,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.utensils },
+            ],
+          },
+          {
+            id: "buffet",
+            name: "ಬಫೆ ಸರ್ವೀಸ್ ಸಾಮಾನು",
+            items: [
+              { id: "SFD-U102", name: "ಪ್ರೀಮಿಯಂ ಬಫೆ ಸರ್ವೀಸ್ ಸೆಟ್", price: "₹6,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.utensils },
+              { id: "SFD-U108", name: "ಚಾಫಿಂಗ್ ಡಿಶ್ ಸೆಟ್", price: "₹4,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.utensils },
+            ],
+          },
+          {
+            id: "catering",
+            name: "ಪೂರ್ಣ ಕ್ಯಾಟರಿಂಗ್ ಸೆಟಪ್",
+            items: [
+              { id: "SFD-U103", name: "ಪೂರ್ಣ ಕ್ಯಾಟರಿಂಗ್ ಪಾತ್ರೆ ಪ್ಯಾಕೇಜ್", price: "₹10,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.utensils },
+              { id: "SFD-U112", name: "ದೊಡ್ಡ ಫಂಕ್ಷನ್ ಪ್ಯಾಕೇಜ್ (500+ ಜನ)", price: "₹18,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.utensils },
+            ],
+          },
+        ],
+      },
+      {
+        slug: "rentals",
+        name: "ಟೆಂಟ್, ಜನರೇಟರ್ ಮತ್ತು ಬಾಡಿಗೆ ಸಾಮಾನು",
+        desc: "ಪೆಂಡಾಲ್, ಜನರೇಟರ್, ಕುರ್ಚಿಗಳು ಮತ್ತು ಎಲ್ಲಾ ಈವೆಂಟ್ ಸಾಮಗ್ರಿ — ಸಮಯಕ್ಕೆ ಸರಿಯಾಗಿ ಸೆಟಪ್ ಮತ್ತು ತೆಗೆಯುವಿಕೆ.",
+        img: IMAGES.tent,
+        subcategories: [
+          {
+            id: "pandals",
+            name: "ಪೆಂಡಾಲ್ ಮತ್ತು ಟೆಂಟ್",
+            items: [
+              { id: "SFD-R101", name: "ಬೇಸಿಕ್ ಪೆಂಡಾಲ್ ಸೆಟಪ್", price: "₹10,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.tent },
+              { id: "SFD-R104", name: "ಪ್ರೀಮಿಯಂ ಡೆಕೊರೇಟೆಡ್ ಮಾರ್ಕ್ಯೂ ಟೆಂಟ್", price: "₹20,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.tent },
+            ],
+          },
+          {
+            id: "generators",
+            name: "ಜನರೇಟರ್",
+            items: [
+              { id: "SFD-R201", name: "15 KVA ಸೈಲೆಂಟ್ ಜನರೇಟರ್", price: "₹4,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.generator },
+              { id: "SFD-R204", name: "30 KVA ಸೈಲೆಂಟ್ ಜನರೇಟರ್", price: "₹7,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.generator },
+            ],
+          },
+          {
+            id: "furniture",
+            name: "ಕುರ್ಚಿ ಮತ್ತು ಫರ್ನಿಚರ್",
+            items: [
+              { id: "SFD-R301", name: "ಪ್ಲಾಸ್ಟಿಕ್ ಕುರ್ಚಿ (100ಕ್ಕೆ)", price: "₹2,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.chairs },
+              { id: "SFD-R305", name: "ಪ್ರೀಮಿಯಂ ಕುಶನ್ ಕುರ್ಚಿ (100ಕ್ಕೆ)", price: "₹4,000 ಇಂದ ಪ್ರಾರಂಭ", img: IMAGES.chairs },
+            ],
+          },
         ],
       },
     ],
@@ -272,5 +543,14 @@ export const dict = {
     instagramTitle: "Instagram‌ನಲ್ಲಿ ನಮ್ಮ ಕೆಲಸ",
     instagramSub: "ನಮ್ಮ ಇತ್ತೀಚಿನ ಸೆಟಪ್ ಮತ್ತು ಸಂಭ್ರಮಗಳ ಒಂದು ನೋಟ.",
     instagramFollowBtn: "Instagram‌ನಲ್ಲಿ ಫಾಲೋ ಮಾಡಿ",
+    pastEventsEyebrow: "ನಮ್ಮ ಕೆಲಸ",
+    pastEventsTitle: "ನಾವು ಆಚರಿಸಿದ ಮದುವೆಗಳು",
+    pastEventsSub: "ನಾವು ಭಾಗಿಯಾದ ಸಂಭ್ರಮಗಳ ಒಂದು ನೋಟ.",
+    pastEvents: [
+      { names: "ಅರ್ಜುನ್ & ಪ್ರಿಯಾ", venue: "ಕಲ್ಯಾಣ ಮಂಟಪ, ಮಧುಗಿರಿ", date: "ಫೆಬ್ರವರಿ 2026", img: IMAGES.pastEvent1 },
+      { names: "ನವೀನ್ & ದೀಪಾ", venue: "ಕಮ್ಯುನಿಟಿ ಹಾಲ್, ಮಧುಗಿರಿ", date: "ಡಿಸೆಂಬರ್ 2025", img: IMAGES.pastEvent2 },
+      { names: "ಕಿರಣ್ & ಶ್ವೇತಾ", venue: "ಶಿವು ಈವೆಂಟ್ಸ್ ಗ್ರೌಂಡ್ಸ್, ಮಧುಗಿರಿ", date: "ನವೆಂಬರ್ 2025", img: IMAGES.pastEvent3 },
+      { names: "ವಿಕ್ರಮ್ & ಅಂಜಲಿ", venue: "ಗಾರ್ಡನ್ ವೆನ್ಯೂ, ಮಧುಗಿರಿ", date: "ಅಕ್ಟೋಬರ್ 2025", img: IMAGES.pastEvent4 },
+    ],
   },
 };

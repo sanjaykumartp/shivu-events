@@ -20,10 +20,10 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6 py-16 grid sm:grid-cols-3 gap-12">
         <div>
           <div className="flex items-center gap-2.5 mb-3">
-            <span className="flex items-center justify-center w-9 h-9 rounded-full border border-gold text-gold font-display text-lg">✦</span>
+            <span className="flex items-center justify-center w-9 h-9 rounded-full border border-goldSoft text-goldSoft font-display text-lg">✦</span>
             <div>
               <p className="font-display text-2xl leading-none">{lang === "en" ? "Shivu Events" : "ಶಿವು ಈವೆಂಟ್ಸ್"}</p>
-              <p className="text-[11px] tracking-widest uppercase text-gold/80 mt-1">{t.footerTagline}</p>
+              <p className="text-[11px] tracking-widest uppercase text-goldSoft mt-1">{t.footerTagline}</p>
             </div>
           </div>
           <p className="text-sm text-cream/60 leading-relaxed mt-4 max-w-xs">{t.footerDesc}</p>
@@ -42,7 +42,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="text-gold text-sm tracking-widest uppercase mb-5">{t.footerQuickLinks}</p>
+          <p className="text-goldSoft text-sm tracking-widest uppercase mb-5">{t.footerQuickLinks}</p>
           <nav className="flex flex-col gap-3 text-sm text-cream/70">
             <Link href="/" className="hover:text-cream transition-colors">{t.nav[0]}</Link>
             <Link href="/#services" className="hover:text-cream transition-colors">{t.nav[1]}</Link>
@@ -53,14 +53,14 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="text-gold text-sm tracking-widest uppercase mb-5">{t.footerContact}</p>
+          <p className="text-goldSoft text-sm tracking-widest uppercase mb-5">{t.footerContact}</p>
           <div className="flex flex-col gap-3 text-sm text-cream/70">
             <a href={`tel:+${WHATSAPP_NUMBER}`} className="flex items-center gap-2.5 hover:text-cream transition-colors">
-              <ContactIcon className="w-4 h-4 text-gold shrink-0" />
+              <ContactIcon className="w-4 h-4 text-goldSoft shrink-0" />
               {PHONE_DISPLAY}
             </a>
             <span className="flex items-center gap-2.5">
-              <LocationIcon className="w-4 h-4 text-gold shrink-0" />
+              <LocationIcon className="w-4 h-4 text-goldSoft shrink-0" />
               {t.location}
             </span>
           </div>
